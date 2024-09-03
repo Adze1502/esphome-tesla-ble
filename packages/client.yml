@@ -1,6 +1,7 @@
 substitutions:
   ble_mac_address: !secret ble_mac_address
   tesla_vin: !secret tesla_vin
+  charging_amps_min: "5"
   charging_amps_max: "32"
 
 ble_client:
@@ -83,7 +84,7 @@ number:
     icon: mdi:ev-station
     unit_of_measurement: "A"
     mode: slider
-    min_value: 0
+    min_value: $charging_amps_min
     max_value: $charging_amps_max
     step: 1
     optimistic: true
@@ -101,7 +102,7 @@ number:
     mode: slider
     min_value: 50
     max_value: 100
-    step: 1
+    step: 5
     optimistic: true
     restore_value: true
     on_value:
