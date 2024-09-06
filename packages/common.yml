@@ -3,7 +3,6 @@ sensor:
     name: "WiFi Signal"
     update_interval: 60s
     icon: mdi:wifi
-
   - platform: uptime
     name: "Uptime"
     update_interval: 60s
